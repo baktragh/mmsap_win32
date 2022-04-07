@@ -422,7 +422,7 @@ void loadAndPlayFile(Glib::ustring fspec, bool shout) {
         sti += '\n';
         sti += et;
         gui->txvTuneInfo->get_buffer()->set_text(sti);
-        gui->toolTips.set_tip(*(gui->lblFilename), Glib::ustring(g_strstrip((gchar*) sti.c_str())));
+        //gui->toolTips.set_tip(*(gui->lblFilename), Glib::ustring(g_strstrip((gchar*) sti.c_str())));
     }
 
 }

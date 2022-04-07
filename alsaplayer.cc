@@ -7,10 +7,10 @@ AlsaPlayer::AlsaPlayer(Preferences* pf, GUI* gi) {
     playerState = PLAYER_EMPTY;
     errorMessage = "No error";
     sapBuffer = NULL;
-    prefs = pf;
+    prefs = pf;      
     gui = gi;
 
-    state = ASAP_New();
+    state = ASAP_New();          
 
     updateConfig();
     blockSeekingUpdateFlag = false;
@@ -54,7 +54,7 @@ AlsaPlayer::~AlsaPlayer() {
 
 int AlsaPlayer::load(Glib::ustring filespec) {
 
-    cibool r = TRUE;
+    bool r = TRUE;
     gboolean b = FALSE;
 
 #ifdef DEBUG_PRINTOUTS

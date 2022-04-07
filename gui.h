@@ -17,7 +17,7 @@ class GUI {
 public:
 
     /*Tooltips*/
-    Gtk::Tooltips toolTips;
+    //Gtk::Tooltips toolTips;
 
 
     /*Window and player*/
@@ -29,10 +29,10 @@ public:
     Gtk::Button* btnPrevious;
     Gtk::Button* btnNext;
     Gtk::Label* lblSongCounter;
-    Gtk::HScale* hscSeeking;
+    Gtk::Scale* hscSeeking;
     Gtk::Label* lblElapsedTime;
     Gtk::Label* lblFilename;
-    Gtk::VBox* vbxPlayerBox;
+    Gtk::Box* vbxPlayerBox;
     Gtk::ToggleButton* tgbAdvancedControls;
     Gtk::Button* btnNextTune;
     Gtk::Button* btnPreviousTune;
@@ -69,12 +69,12 @@ public:
     Gtk::CheckButton* chbUseDefaultDirectory;
     Gtk::Entry* entDefaultDirectory;
     Gtk::ImageMenuItem* mniPreferences;
-    Gtk::HScale* hscSilenceLimit;
+    Gtk::Scale* hscSilenceLimit;
     Gtk::CheckButton* chbAlwaysFirstSubsong;
     Gtk::CheckButton* chbNormalizeSAPHeader;
     Gtk::SpinButton* spbVisualizationPeriod;
     Gtk::CheckButton* chbAdvancedControlsShownByDefault;
-    Gtk::HScale* hscVisualizationSynchro;
+    Gtk::Scale* hscVisualizationSynchro;
     Gtk::Entry* entAsmaDirectory;
     Gtk::Entry* entStilFile;
     Gtk::CheckButton* chbUseStil;

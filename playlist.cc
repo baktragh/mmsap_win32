@@ -13,7 +13,7 @@ bool Playlist::addFile(Glib::ustring fspec) {
     printf("Playlist::addFile(%s)\n", fspec.c_str());
 #endif
 
-    cibool ourFile = ASAPInfo_IsOurFile(fspec.c_str());
+    bool ourFile = ASAPInfo_IsOurFile(fspec.c_str());
     if (ourFile == FALSE) return false;
 
     Gtk::TreeModel::Row row = *(lstore->append());
