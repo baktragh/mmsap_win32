@@ -24,7 +24,7 @@ public:
     Gtk::Window* wndMain;
     Gtk::FileChooserDialog* fcdLoad;
     Gtk::Button* btnPlayOrPause;
-    Gtk::ImageMenuItem* mniLoadSAP;
+    Gtk::MenuItem* mniLoadSAP;
     Gtk::Button* btnStop;
     Gtk::Button* btnPrevious;
     Gtk::Button* btnNext;
@@ -39,7 +39,7 @@ public:
     Gtk::Label* lblTuneInfo;
 
     /*Browse and play*/
-    Gtk::ImageMenuItem* mniBrowseAndPlay;
+    Gtk::MenuItem* mniBrowseAndPlay;
     Gtk::FileChooserDialog* fcdBrowseAndPlay;
     Gtk::Button* btnBrowseAndPlayClose;
 
@@ -57,18 +57,18 @@ public:
     Gtk::RadioMenuItem* mniRepPlaylist;
 
     /*About*/
-    Gtk::ImageMenuItem* mniAbout;
+    Gtk::MenuItem* mniAbout;
     Gtk::Dialog* dlgAbout;
     Gtk::Label* lblVersion;
 
     /*Quit*/
-    Gtk::ImageMenuItem* mniQuit;
+    Gtk::MenuItem* mniQuit;
 
     /*Preferences dialog*/
     Gtk::Dialog* dlgPreferences;
     Gtk::CheckButton* chbUseDefaultDirectory;
     Gtk::Entry* entDefaultDirectory;
-    Gtk::ImageMenuItem* mniPreferences;
+    Gtk::MenuItem* mniPreferences;
     Gtk::Scale* hscSilenceLimit;
     Gtk::CheckButton* chbAlwaysFirstSubsong;
     Gtk::CheckButton* chbNormalizeSAPHeader;
@@ -90,26 +90,26 @@ public:
 
     /*Playlist*/
     Gtk::TreeView* trvPlaylist;
-    Gtk::ImageMenuItem* mniAddFileToPlaylist;
-    Gtk::ImageMenuItem* mniAddDirectoryToPlaylist;
+    Gtk::MenuItem* mniAddFileToPlaylist;
+    Gtk::MenuItem* mniAddDirectoryToPlaylist;
 
     Gtk::FileChooserDialog* fcdAddToPlaylist;
-    Gtk::ImageMenuItem* mniSavePlaylist;
-    Gtk::ImageMenuItem* mniLoadPlaylist;
+    Gtk::MenuItem* mniSavePlaylist;
+    Gtk::MenuItem* mniLoadPlaylist;
     Gtk::FileChooserDialog* fcdPlaylist;
 
-    Gtk::ImageMenuItem* mniPlaylistRemoveAll;
-    Gtk::ImageMenuItem* mniPlaylistRemoveSelected;
+    Gtk::MenuItem* mniPlaylistRemoveAll;
+    Gtk::MenuItem* mniPlaylistRemoveSelected;
     Gtk::MenuItem* mniPlaylistTrimSelected;
-    Gtk::ImageMenuItem* mniPlaylistPurge;
+    Gtk::MenuItem* mniPlaylistPurge;
 
     Gtk::MenuItem* mniPlaylistSelectAll;
     Gtk::MenuItem* mniPlaylistSelectNone;
     Gtk::MenuItem* mniPlaylistSelectInvert;
 
-    Gtk::ImageMenuItem* mniAddPlayerFile;
+    Gtk::MenuItem* mniAddPlayerFile;
 
-    Gtk::VBox* vbxPlaylist;
+    Gtk::Box* vbxPlaylist;
 
 
     /*Establishment*/

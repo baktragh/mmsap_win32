@@ -222,6 +222,7 @@ void on_quitInvoke() {
 
 bool on_wndMainClose(GdkEventAny* evt) {
     quit(false);
+    return false;
 }
 
 /*Preferences *****************************************************************/
@@ -240,6 +241,7 @@ void on_preferencesInvoke() {
 
 bool on_preferencesClose(GdkEventAny* evt) {
     gui->dlgPreferences->hide();
+    return false;
 }
 
 /*Advanced controls toggle ****************************************************/

@@ -526,22 +526,16 @@ void GUI::on_btnBrowseSTIL() {
 
 void GUI::setupPlaylistView(Gtk::TreeModelColumn<bool> *tmc0, Gtk::TreeModelColumn<Glib::ustring> *tmc1, Glib::RefPtr<Gtk::ListStore> model) {
 
-    static Gtk::TreeViewColumn tvc0("0", *tmc0);
-    static Gtk::TreeViewColumn tvc1("1", *tmc1);
+    static Gtk::TreeViewColumn tvc1("1",*tmc1); /*Markup*/
 
-    tvc0.set_sizing(Gtk::TREE_VIEW_COLUMN_FIXED);
     tvc1.set_sizing(Gtk::TREE_VIEW_COLUMN_FIXED);
-
-    tvc0.set_fixed_width(25);
-
-    trvPlaylist->append_column(tvc0);
     trvPlaylist->append_column(tvc1);
 
+    /*Text cell renderer*/
     Gtk::CellRenderer* cr = trvPlaylist->get_column_cell_renderer(0);
-    Gtk::CellRendererToggle* crt = (Gtk::CellRendererToggle*)cr;
-    crt->set_radio();
-    crt->set_active(false);
-
+    tvc1.clear_attributes(*cr);
+    tvc1.add_attribute(*cr,Glib::ustring("markup"),1); /*Markup taken from MODEL column 1*/
+    
     trvPlaylist->set_model(model);
     trvPlaylist->get_selection()->set_mode(Gtk::SELECTION_MULTIPLE);
 

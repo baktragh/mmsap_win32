@@ -389,6 +389,7 @@ int AlsaPlayer::closeSoundCard() {
 #ifdef DEBUG_PRINTOUTS
     printf("closeSoundCard:END\n");
 #endif
+    return 0;
 }
 
 void playLoopNormal(void *udata, Uint8 *stream, int len) {
@@ -473,9 +474,9 @@ void AlsaPlayer::updateConfig() {
 
 bool AlsaPlayer::handleRepeat() {
     /*Before this routine has opportunity to be called, state of the
-     *player could have chaged. If so, we do nothing. This routine
+     *player could have changed. If so, we do nothing. This routine
      *runs in the GTK+ thread, so sync is not needed. All methods that
-     *neutralize repeat handling (lika playOrPause() etc. must have this
+     *neutralize repeat handling (like playOrPause() etc. must have this
      *routine neutralized*/
 
     if (playerState != PLAYER_PLAYING || cancelRepeatFlag == true) {
@@ -517,6 +518,8 @@ bool AlsaPlayer::handleRepeat() {
             return false;
         }
     }
+    
+    return false;
 
 }
 
